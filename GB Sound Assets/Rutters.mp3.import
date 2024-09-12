@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rutters.mp3-6dbb815a3a23a527bbbd62bce49d3e6e.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Rutters.mp3"
+dest_files=[ "res://.import/Rutters.mp3-6dbb815a3a23a527bbbd62bce49d3e6e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

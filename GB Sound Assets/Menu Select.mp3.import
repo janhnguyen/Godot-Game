@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu Select.mp3-bf2c78ecd5bc90e154062dd33d95a0e6.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Menu Select.mp3"
+dest_files=[ "res://.import/Menu Select.mp3-bf2c78ecd5bc90e154062dd33d95a0e6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

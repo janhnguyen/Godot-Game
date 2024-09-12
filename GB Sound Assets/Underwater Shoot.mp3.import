@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Underwater Shoot.mp3-c6d3f2b86f49acd80ab9be578a5a337e.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Underwater Shoot.mp3"
+dest_files=[ "res://.import/Underwater Shoot.mp3-c6d3f2b86f49acd80ab9be578a5a337e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

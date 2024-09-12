@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Swing 1.mp3-a3f03e704bb56bdd1c8f831e4f35a175.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Swing 1.mp3"
+dest_files=[ "res://.import/Swing 1.mp3-a3f03e704bb56bdd1c8f831e4f35a175.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/the-bards-tale-63078.mp3-cb925bb417c5a578668933baf426b903.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/the-bards-tale-63078.mp3"
+dest_files=[ "res://.import/the-bards-tale-63078.mp3-cb925bb417c5a578668933baf426b903.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

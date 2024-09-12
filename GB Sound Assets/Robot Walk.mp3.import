@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Robot Walk.mp3-ae11aa79439beeae2f2867931bf76959.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Robot Walk.mp3"
+dest_files=[ "res://.import/Robot Walk.mp3-ae11aa79439beeae2f2867931bf76959.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
