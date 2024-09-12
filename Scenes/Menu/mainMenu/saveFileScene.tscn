@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Menu/MainMenu/New instruction button for save file.gd" type="Script" id=1]
+[ext_resource path="res://Art/Menu/Valorax-lg25V.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://GB Sound Assets/Menu Select 2.wav" type="AudioStream" id=3]
+[ext_resource path="res://Art/Menu/mathieu-chauderlot-room-0010-layer-18.jpg" type="Texture" id=4]
+[ext_resource path="res://Scripts/Menu/MainMenu/saveFileScene.gd" type="Script" id=5]
+[ext_resource path="res://GB Sound Assets/cave-temple-fantasy-dark-20185.mp3" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="saveFileScene" type="Node2D"]
+position = Vector2( -1, 2 )
+script = ExtResource( 5 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Mathieu-chauderlot-room-0010-layer-18" type="Sprite" parent="TextureRect"]
+position = Vector2( 527, 320 )
+scale = Vector2( 0.547208, 0.591018 )
+texture = ExtResource( 4 )
+
+[node name="okbutton" type="Button" parent="TextureRect"]
+margin_left = 582.0
+margin_top = 278.0
+margin_right = 622.0
+margin_bottom = 299.0
+text = "OK"
+
+[node name="LineEdit" type="LineEdit" parent="TextureRect"]
+margin_left = 405.0
+margin_top = 273.0
+margin_right = 568.0
+margin_bottom = 304.0
+custom_fonts/font = SubResource( 2 )
+max_length = 20
+placeholder_text = "enter name"
+placeholder_alpha = 0.095
+caret_blink = true
+
+[node name="BackButton" type="Button" parent="TextureRect"]
+margin_left = 480.0
+margin_top = 334.0
+margin_right = 571.0
+margin_bottom = 363.0
+text = "BACK"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 398.0
+margin_top = 239.0
+margin_right = 629.0
+margin_bottom = 302.0
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "ENTER PLAYERS NAME
+
+"
+
+[node name="clicksound2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 477, 368 )
+stream = ExtResource( 3 )
+
+[node name="instruction" type="Button" parent="."]
+margin_left = 844.0
+margin_top = 408.0
+margin_right = 983.0
+margin_bottom = 462.0
+text = "INSTRUCTIONS"
+script = ExtResource( 1 )
+
+[node name="clicksound3" type="AudioStreamPlayer2D" parent="instruction"]
+position = Vector2( -367, -40 )
+stream = ExtResource( 3 )
+
+[node name="Backgroundmusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[connection signal="button_down" from="TextureRect/okbutton" to="." method="_on_okbutton_button_down"]
+[connection signal="pressed" from="TextureRect/okbutton" to="." method="_on_okbutton_pressed"]
+[connection signal="button_down" from="TextureRect/BackButton" to="." method="_on_BackButton_button_down"]
+[connection signal="pressed" from="TextureRect/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="button_down" from="instruction" to="." method="_on_instruction_button_down"]
+[connection signal="pressed" from="instruction" to="." method="_on_instruction_pressed"]

@@ -1,0 +1,164 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/Menu/MainMenu/quitGame.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Menu/MainMenu/newGame.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Menu/MainMenu/TitleScreen.gd" type="Script" id=5]
+[ext_resource path="res://Art/Menu/mathieu-chauderlot-room-0010-layer-18.jpg" type="Texture" id=6]
+[ext_resource path="res://Art/Menu/Valorax-lg25V.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://GB Sound Assets/Menu Select 2.wav" type="AudioStream" id=8]
+[ext_resource path="res://Scripts/Menu/Fortniters.gd" type="Script" id=9]
+[ext_resource path="res://GB Sound Assets/cave-temple-fantasy-dark-20185.mp3" type="AudioStream" id=10]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.835294, 0.905882, 1 )
+colors = PoolColorArray( 0.76888, 0.249555, 0.0870997, 1, 0.870443, 0.407851, 0.102005, 0, 0.634711, 0.256386, 0.00625331, 0.202703 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 2043
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 0.00227273 ), 0.0, 2.51591, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+direction = Vector3( 1, -1, 0 )
+spread = 50.0
+gravity = Vector3( 0, -1, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 1.0
+angular_velocity = 32.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 100.0
+scale = 4.0
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_color = Color( 0.247059, 0.0941176, 0.0941176, 1 )
+font_data = ExtResource( 7 )
+
+[node name="Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 282.0
+margin_bottom = 180.0
+rect_scale = Vector2( 0.8, 0.7 )
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 642.68, 457.564 )
+scale = Vector2( 0.669083, 0.840489 )
+texture = ExtResource( 6 )
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 1224, 868 )
+amount = 100
+lifetime = 79.86
+visibility_rect = Rect2( -100, -100, 5, 5 )
+draw_order = 1
+process_material = SubResource( 6 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 52, 862 )
+amount = 100
+lifetime = 79.86
+draw_order = 1
+process_material = SubResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -5.0
+margin_top = 49.0
+margin_right = 1302.0
+margin_bottom = 230.0
+size_flags_stretch_ratio = 1.77
+custom_colors/font_color = Color( 0.360784, 0.219608, 0.160784, 1 )
+custom_colors/font_outline_modulate = Color( 0.286275, 0.196078, 0.196078, 1 )
+custom_colors/font_color_shadow = Color( 0.74902, 0.752941, 0.537255, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "The Fortniters"
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+__meta__ = {
+"_editor_description_": "The Fortniters"
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 79.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Node" type="Node" parent="."]
+
+[node name="newGame" type="Button" parent="."]
+margin_left = 465.0
+margin_top = 247.0
+margin_right = 819.0
+margin_bottom = 337.0
+text = "New Game"
+script = ExtResource( 3 )
+
+[node name="Clicksound1" type="AudioStreamPlayer" parent="newGame"]
+stream = ExtResource( 8 )
+
+[node name="settings" type="Button" parent="."]
+margin_left = 468.0
+margin_top = 380.0
+margin_right = 816.0
+margin_bottom = 473.0
+text = "Settings"
+
+[node name="toSetMenu" type="Button" parent="settings"]
+margin_left = -8.0
+margin_top = -1.0
+margin_right = 362.0
+margin_bottom = 93.0
+text = "Settings"
+script = ExtResource( 5 )
+
+[node name="Clicksound4" type="AudioStreamPlayer" parent="settings/toSetMenu"]
+stream = ExtResource( 8 )
+
+[node name="quitGame" type="Button" parent="."]
+margin_left = 469.0
+margin_top = 507.0
+margin_right = 818.0
+margin_bottom = 607.0
+text = "Quit Game"
+script = ExtResource( 2 )
+
+[node name="Clicksound5" type="AudioStreamPlayer" parent="quitGame"]
+stream = ExtResource( 8 )
+
+[node name="Clicksound6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="Instruction button" type="Button" parent="."]
+margin_left = 1086.0
+margin_top = 574.0
+margin_right = 1248.0
+margin_bottom = 660.0
+text = "Instructions"
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[connection signal="button_down" from="newGame" to="newGame" method="_on_newGame_button_down"]
+[connection signal="button_down" from="settings/toSetMenu" to="settings/toSetMenu" method="_on_toSetMenu_button_down"]
+[connection signal="button_down" from="quitGame" to="quitGame" method="_on_quitGame_button_down"]
+[connection signal="button_down" from="Instruction button" to="." method="_on_Instruction_button_button_down"]
+[connection signal="pressed" from="Instruction button" to="." method="_on_Instruction_button_pressed"]

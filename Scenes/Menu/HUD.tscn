@@ -1,0 +1,231 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Scripts/Menu/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Menu/UI/expBar.gd" type="Script" id=3]
+[ext_resource path="res://Art/CharacterSprites/enemyModels/glowingWisp.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Menu/UI/inventory.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Menu/UI/playerName.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Menu/UI/PauseMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Menu/UI/Profile.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/Menu/UI/playerLevel.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Menu/UI/battleScene.tscn" type="PackedScene" id=10]
+[ext_resource path="res://GB Sound Assets/the-bards-tale-63078.mp3" type="AudioStream" id=11]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 1, 0.0784314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 482
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 1 )
+colors = PoolColorArray( 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+width = 482
+
+[sub_resource type="Gradient" id=5]
+interpolation_mode = 1
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+width = 482
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="PauseMenu" parent="." instance=ExtResource( 7 )]
+visible = false
+margin_left = 475.0
+margin_top = 277.0
+margin_right = 475.0
+margin_bottom = 277.0
+
+[node name="hpBar" type="ProgressBar" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -10.0
+margin_right = 482.0
+custom_styles/fg = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
+step = 1.0
+percent_visible = false
+
+[node name="playerName" type="Label" parent="."]
+margin_left = 382.0
+margin_top = 575.0
+margin_right = 482.0
+margin_bottom = 590.0
+text = "playerName"
+clip_text = true
+script = ExtResource( 6 )
+
+[node name="playerLevel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -30.0
+margin_top = -40.0
+margin_bottom = -20.0
+rect_scale = Vector2( 2, 2 )
+text = "01"
+align = 1
+script = ExtResource( 9 )
+
+[node name="playerExp" type="Label" parent="."]
+margin_left = 542.0
+margin_top = 575.0
+margin_right = 642.0
+margin_bottom = 590.0
+text = "Experience
+"
+
+[node name="expBar" type="TextureProgress" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -482.0
+margin_top = -10.0
+margin_bottom = -9.0
+rect_min_size = Vector2( 100, 1 )
+rect_scale = Vector2( 1, 10 )
+rounded = true
+texture_under = SubResource( 2 )
+texture_over = SubResource( 4 )
+texture_progress = SubResource( 6 )
+tint_under = Color( 1, 0, 0, 1 )
+tint_over = Color( 0, 0.929412, 1, 1 )
+tint_progress = Color( 0, 0, 0, 1 )
+script = ExtResource( 3 )
+
+[node name="partyMember1" type="TextureRect" parent="."]
+visible = false
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 74.0
+margin_bottom = 74.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="name" type="Label" parent="partyMember1"]
+margin_left = 64.0
+margin_right = 158.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "partyMember1"
+
+[node name="hpBar" type="ProgressBar" parent="partyMember1"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -36.0
+margin_right = 304.0
+margin_bottom = -6.0
+custom_styles/fg = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
+percent_visible = false
+
+[node name="partyMember2" type="TextureRect" parent="."]
+visible = false
+margin_left = 10.0
+margin_top = 52.0
+margin_right = 74.0
+margin_bottom = 116.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="name" type="Label" parent="partyMember2"]
+margin_left = 64.0
+margin_right = 158.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "partyMember1"
+
+[node name="hpBar" type="ProgressBar" parent="partyMember2"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -36.0
+margin_right = 304.0
+margin_bottom = -6.0
+custom_styles/fg = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
+percent_visible = false
+
+[node name="partyMember3" type="TextureRect" parent="."]
+visible = false
+margin_left = 10.0
+margin_top = 94.0
+margin_right = 74.0
+margin_bottom = 158.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="name" type="Label" parent="partyMember3"]
+margin_left = 64.0
+margin_right = 158.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "partyMember1"
+
+[node name="hpBar" type="ProgressBar" parent="partyMember3"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -36.0
+margin_right = 304.0
+margin_bottom = -6.0
+custom_styles/fg = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
+percent_visible = false
+
+[node name="partyMember4" type="TextureRect" parent="."]
+visible = false
+margin_left = 10.0
+margin_top = 136.0
+margin_right = 74.0
+margin_bottom = 200.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="name" type="Label" parent="partyMember4"]
+margin_left = 64.0
+margin_right = 158.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "partyMember1"
+
+[node name="hpBar" type="ProgressBar" parent="partyMember4"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -36.0
+margin_right = 304.0
+margin_bottom = -6.0
+custom_styles/fg = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
+percent_visible = false
+
+[node name="inventory" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Profile" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="battleScene" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="Backgroundmusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
