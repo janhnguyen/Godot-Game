@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Death Sound 2.mp3-90725687d36a1156feae9affba04f158.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Death Sound 2.mp3"
+dest_files=[ "res://.import/Death Sound 2.mp3-90725687d36a1156feae9affba04f158.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

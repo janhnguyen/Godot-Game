@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Buff Up.mp3-d250baecbfdc0b92ec8917c3402819cf.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Buff Up.mp3"
+dest_files=[ "res://.import/Buff Up.mp3-d250baecbfdc0b92ec8917c3402819cf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

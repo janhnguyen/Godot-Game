@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Car 1-2-3.mp3-e3778cb7af4560c39b38c5077b2f11ce.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Car 1-2-3.mp3"
+dest_files=[ "res://.import/Car 1-2-3.mp3-e3778cb7af4560c39b38c5077b2f11ce.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

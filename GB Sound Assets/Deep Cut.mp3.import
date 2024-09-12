@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Deep Cut.mp3-179f6facb95fca964f6628ab5822ae53.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/Deep Cut.mp3"
+dest_files=[ "res://.import/Deep Cut.mp3-179f6facb95fca964f6628ab5822ae53.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

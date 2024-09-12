@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cave-temple-fantasy-dark-20185.mp3-14be3ba4ac007e9a863f68e216747854.mp3str"
+
+[deps]
+
+source_file="res://GB Sound Assets/cave-temple-fantasy-dark-20185.mp3"
+dest_files=[ "res://.import/cave-temple-fantasy-dark-20185.mp3-14be3ba4ac007e9a863f68e216747854.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
